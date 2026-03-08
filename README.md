@@ -50,6 +50,13 @@ Aplikasi ini sudah dilengkapi dengan sistem **Web Installer Otomatis** untuk mem
 4. **Instalasi Web**: Akses URL aplikasi Anda dari Browser (contoh: `https://domain-anda.com/mikhmon/`). Halaman instalasi akan langsung menyambut Anda.
 5. **Konfigurasi Akhir**: Masukkan detail _Database_ yang baru saja dibuat di langkah 3 ke form instalator. Sistem akan otomatis memasang _table_ dan akun Admin khusus untuk Anda!
 
+### 🔄 Cara Install Fitur Auto-Update di Hosting Lama
+Jika aplikasi Mikhmon Anda sudah telanjur berada di _hosting_ dan Anda tidak memiliki fitur menu **Update Aplikasi**, silakan lakukan **Bootstrap Update** sekali saja dengan cara:
+1. *Download* file [`update.php`](https://raw.githubusercontent.com/oprekben-eng/mikmonv3-custom/main/update.php) (Klik kanan > *Save as*).
+2. Unggah file tersebut ke dalam folder *root* instalasi Mikhmon Anda di cPanel (sejajar dengan file `admin.php` dan `index.php`).
+3. Akses file tersebut via *browser* Anda (Contoh: `https://domainanda.com/mikhmon/update.php`).
+4. Tunggu beberapa detik hingga proses instalasi pembaruan dan log sukses tampil di layar. Mulai saat ini dan seterusnya, Anda bisa memakai tombol **System > Update Aplikasi** di dalam layar Admin.
+
 ---
 
 ## �📦 Penyesuaian RouterOS v7 & Stabilitas
