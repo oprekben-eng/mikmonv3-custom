@@ -41,7 +41,18 @@ Halaman Instalasi Database cerdas (akses pertama instalasi akan diarahkan secara
 
 ---
 
-## 📦 Penyesuaian RouterOS v7 & Stabilitas
+## �️ Panduan Instalasi di Server/Hosting
+Aplikasi ini sudah dilengkapi dengan sistem **Web Installer Otomatis** untuk memudahkan Anda.
+
+1. **Upload ke Hosting**: Buka cPanel server Anda, masuk ke *File Manager > public_html*, lalu unggah file `.zip` dari _Source Code_ Mikhmon Custom ini.
+2. **Ekstrak**: Ekstrak isi file zip tersebut ke dalam direktori aplikasi (misal `public_html/mikhmon/`).
+3. **Database Baru**: Buka menu *MySQL® Databases* di cPanel, buat _database_ baru beserta _User_-nya (simpan nama DB, Username, dan Password).
+4. **Instalasi Web**: Akses URL aplikasi Anda dari Browser (contoh: `https://domain-anda.com/mikhmon/`). Halaman instalasi akan langsung menyambut Anda.
+5. **Konfigurasi Akhir**: Masukkan detail _Database_ yang baru saja dibuat di langkah 3 ke form instalator. Sistem akan otomatis memasang _table_ dan akun Admin khusus untuk Anda!
+
+---
+
+## �📦 Penyesuaian RouterOS v7 & Stabilitas
 Sistem juga telah dioptimalkan agar sepenuhnya mendukung **MikroTik RouterOS v7**:
 - Normalisasi penanggalan/jam (ROS v7 parsing).
 - Pencegahan _Blank Page/Error Array_ melalui perbaikan metode pengambilan array variabel MIKROTIK.
