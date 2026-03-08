@@ -97,6 +97,11 @@ if (isset($_POST['action']) && $_POST['action'] === 'start_update') {
                 $logs[] = ">> Melewati konfigurasi sensitif (include/config.php)...";
                 continue;
             }
+            // Jangan overwrite file database utama (Koneksi SQLite/Hosting pengguna bisa hilang jika ditimpa default GitHub)
+            if ($relative_path === 'database/database.php' && file_exists($dest . '/database/database.php')) {
+                $logs[] = ">> Melewati file Database koneksi user (database/database.php)...";
+                continue;
+            }
             // Jangan overwrite folder img/ agar logo user tidak hilang
             if ($file === 'img' && is_dir($src . '/' . $file) && $src == $root_src) {
                 $logs[] = ">> Melewati folder gambar (img)...";
