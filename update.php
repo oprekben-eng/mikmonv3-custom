@@ -68,6 +68,7 @@ function xcopy($src, $dest, $root_src) {
 
         // Jangan overwrite config/database
         if ($relative_path === 'include/config.php') continue;
+        if ($relative_path === 'database/database.php' && file_exists($dest . '/database/database.php')) continue; // Cegah file koneksi DB pengguna tertimpa GitHub
         if (strpos($relative_path, 'database/mikhmon_') === 0) continue; // Skip sqlite database files if any
         if ($file === 'img' && is_dir($src . '/' . $file) && $src == $root_src) continue;
         
