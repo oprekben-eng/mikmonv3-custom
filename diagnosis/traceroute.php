@@ -37,7 +37,7 @@ if (!isset($_SESSION["mikhmon"])) {
                     if($ip) {
                         echo "<tr>";
                         echo "<td style='vertical-align:middle; padding-left:15px;'><i class='fa fa-user mr-1 text-muted'></i> ".$pa['name']."</td>";
-                        echo "<td class='text-right'><button class='btn btn-sm btn-info text-white' style='padding:2px 7px; font-size:12px; margin-right:10px;' onclick='setTarget(\"".$ip."\")'>".$ip."</button></td>";
+                        echo "<td class='text-right'><button class='btn btn-sm bg-warning text-dark' style='padding:2px 7px; font-size:12px; border:none; border-radius:3px; margin-right:10px;' onclick='setTarget(\"".$ip."\")'><b>".$ip."</b></button></td>";
                         echo "</tr>";
                     }
                 }
