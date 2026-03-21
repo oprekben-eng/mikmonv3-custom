@@ -51,6 +51,7 @@ $totalOffline = count($offlineUsers);
                                 <th>Password</th>
                                 <th>Service</th>
                                 <th>Profile</th>
+                                <th>Last Logged Out</th>
                                 <th>Status</th>
                                 <th class="text-center">Action</th>
                             </tr>
@@ -62,6 +63,16 @@ $totalOffline = count($offlineUsers);
                                     <td class="align-middle"><?= htmlspecialchars($s['password'] ?? '') ?></td>
                                     <td class="align-middle"><?= htmlspecialchars($s['service'] ?? 'any') ?></td>
                                     <td class="align-middle"><?= htmlspecialchars($s['profile'] ?? 'default') ?></td>
+                                    <td class="align-middle">
+                                        <?php 
+                                            // Menampilkan log terputus terakhir
+                                            if (!empty($s['last-logged-out'])) {
+                                                echo "<i class='fa fa-clock-o text-muted'></i> " . htmlspecialchars($s['last-logged-out']);
+                                            } else {
+                                                echo "<span class='text-muted'>-</span>";
+                                            }
+                                        ?>
+                                    </td>
                                     <td class="align-middle text-center">
                                         <?php if (($s['disabled'] ?? 'false') == "true"): ?>
                                             <span class="btn btn-sm bg-warning"><i class="fa fa-ban"></i> Disabled</span>
